@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: MyString
+  allergies: MyString
+  special_alerts: MyString
+  lives_with: MyString
+  phone: MyString
+  physician: MyString
+  specialists: MyString
+  immunizations: MyString
+  most_recent_physical_exam: MyString
+  sleeping_pattern: MyText
+  bowel_pattern: MyText
+  seizures: MyText
+  current_health_provider: MyString
+  diagnosis: MyText
+  cps_involvement: MyText
+  legal_issues: MyText
+  hobbies: MyText
+  observation: MyText
+  date_admitted: MyString
+  psychiatrist: MyString
+  admitted: MyString
+  therapist: MyString
+  classroom: MyString
+  pharmacy: MyString
+  nurse: MyString
+  medications: MyText
+
+two:
+  name: MyString
+  dob: MyString
+  allergies: MyString
+  special_alerts: MyString
+  lives_with: MyString
+  phone: MyString
+  physician: MyString
+  specialists: MyString
+  immunizations: MyString
+  most_recent_physical_exam: MyString
+  sleeping_pattern: MyText
+  bowel_pattern: MyText
+  seizures: MyText
+  current_health_provider: MyString
+  diagnosis: MyText
+  cps_involvement: MyText
+  legal_issues: MyText
+  hobbies: MyText
+  observation: MyText
+  date_admitted: MyString
+  psychiatrist: MyString
+  admitted: MyString
+  therapist: MyString
+  classroom: MyString
+  pharmacy: MyString
+  nurse: MyString
+  medications: MyText

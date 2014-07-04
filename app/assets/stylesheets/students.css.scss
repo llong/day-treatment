@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'daytreatment';
+		src:url('fonts/daytreatment.woff?-8w6aex') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'daytreatment';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+	content: "\e600";
+}
+.icon-pencil:before {
+	content: "\e601";
+}
+.icon-print:before {
+	content: "\e602";
+}
+.icon-remove:before {
+	content: "\e603";
+}
+
+.icon-user-add:before {
+	content: "\e604";
+}
+
+
+
+.top30 { margin-top: 30px }
+.top50 { margin-top: 50px }
+.noTopMargin { margin-top: 0; }
+
+body { margin-top: 80px; background: #f5f5f5;}
+
+label { margin-right: 8px }
+
+@media print {
+body { margin-top: 0; }
+
+.navbar, .btn { display: none !important; }
+
+}

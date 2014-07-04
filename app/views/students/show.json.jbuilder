@@ -1,0 +1,1 @@
+json.extract! @patient, :id, :name, :dob, :allergies, :special_alerts, :lives_with, :phone, :physician, :specialists, :immunizations, :most_recent_physical_exam, :sleeping_pattern, :bowel_pattern, :seizures, :immunizations, :current_health_provider, :diagnosis, :cps_involvement, :legal_issues, :hobbies, :observation, :created_at, :updated_at

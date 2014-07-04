@@ -1,0 +1,231 @@
+ 
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><%= link_to ' Home', students_path, :class => "icon-home" %>
+                    </li>
+                    <li><%#= link_to ' Edit', edit_student_path(@student), :class => "icon-pencil" %> 
+                    </li>
+                    <li><%= link_to ' Delete', @student, method: :delete, data: { confirm: 'Are you sure?' }, class: "icon-remove" %>
+                    </li>
+                    <li><a href="javascript:window.print()" class="icon-print"> Print File</a>
+                    </li>
+                </ul>
+
+                <%= link_to ' New Student',new_student_path, class: "btn btn-success pull-right icon-user-add", style: "margin-top: 10px;" %>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+<div class="container">
+<% if notice %>
+<div class="alert alert-dismissable alert-success"><%= notice %></div>
+<% end %>
+
+<h1>Student File</h1>
+
+
+
+
+<div class="row">
+<div class="col-sm-6">
+<h3>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</h3>
+
+<h3>
+  <strong>DOB:</strong>
+  <%= @student.dob %>
+</h3>
+
+
+<h3>
+  <strong>Allergies:</strong>
+  <%= @student.allergies %>
+</h3>
+</div>
+
+
+<div class="col-sm-6">
+<h3>
+  <strong>Date</strong>
+  <%= Date.today.strftime("%B %d" + "," + " %Y")  %>
+</h3>
+</div>
+</div>
+
+<hr>
+<div class="top50"></div>
+
+<h2>Intake Information</h2>
+<div class="top30">
+  
+</div>
+<div class="row">
+
+
+<div class="col-sm-6">
+<p>
+  <strong>Lives with/Relationship:</strong>
+  <%= @student.lives_with %>
+</p>
+
+<p>
+  <strong>Special alerts:</strong>
+  <%= @student.special_alerts %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @student.phone %>
+</p>
+
+
+
+<p>
+  <strong>Physician:</strong>
+  <%= @student.physician %>
+</p>
+
+<p>
+  <strong>Specialists:</strong>
+  <%= @student.specialists %>
+</p>
+
+<p>
+  <strong>Immunizations:</strong>
+  <%= @student.immunizations %>
+</p>
+
+
+
+
+<p>
+  <strong>Most recent physical exam:</strong>
+  <%= @student.most_recent_physical_exam %>
+</p>
+
+<p>
+  <strong>Sleeping pattern:</strong><br>
+  <%= @student.sleeping_pattern %>
+</p>
+
+<p>
+  <strong>Bowel Pattern/Enuresis, Encropesis:</strong><br>
+  <%= @student.bowel_pattern %>
+</p>
+
+<p>
+  <strong>Seizures:</strong><br>
+  <%= @student.seizures %>
+</p>
+
+</div>
+<div class="col-sm-6">
+<p>
+  <strong>Current health provider:</strong>
+  <%= @student.current_health_provider %>
+</p>
+
+
+
+<p>
+  <strong>Diagnosis:</strong><br>
+  <%= @student.diagnosis %>
+</p>
+
+
+
+<p>
+  <strong>CPS Involvement:</strong><br>
+  <%= @student.cps_involvement %>
+</p>
+
+<p>
+  <strong>Legal issues:</strong><br>
+  <%= @student.legal_issues %>
+</p>
+
+<p>
+  <strong>Hobbies:</strong><br>
+  <%= @student.hobbies %>
+</p>
+
+<p>
+  <strong>Observation:</strong><br>
+  <%= @student.observation %>
+</p>
+
+<p>
+  <strong>Medications:</strong><br>
+  <%= @student.medications %>
+</p>
+</div>
+</div>
+
+<div class="top50"></div>
+<hr>
+<h2>Day Treatment Information</h2>
+<div class="top30">
+  
+</div>
+<div class="row">
+<div class="col-sm-6">
+
+<p>
+  <% if @student.admitted == "Yes" %>
+  <strong>Date Admitted:</strong>
+  <%= @student.date_admitted %>
+  <% else %>
+  <strong>Admitted:</strong>
+  No
+  <% end %>
+</p>
+
+<p>
+  <strong>Therapist:</strong>
+  <%= @student.therapist %>
+</p>
+
+<p>
+  <strong>Psychiatrist:</strong>
+  <%= @student.psychiatrist %>
+</p>
+</div>
+
+
+<div class="col-sm-6">
+
+
+<p>
+  <strong>Pharmacy:</strong>
+  <%= @student.pharmacy %>
+</p>
+
+<p>
+  <strong>Classroom/Grade:</strong>
+  <%= @student.classroom %>
+</p>
+</div>
+
+</div>
+</div>
+<br>
+

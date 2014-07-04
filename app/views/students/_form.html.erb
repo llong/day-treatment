@@ -1,0 +1,229 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="top30"></div>
+
+<hr>
+<h2>Intake Information</h2>
+<div class="top30"></div>
+
+<div class="row">
+  <div class="col-sm-5">
+  <p><label>Nurse:</label>
+    <%= f.radio_button(:nurse, "tammy") %> 
+  <%= f.label(:nurse, "Tammy") %>
+  <%= f.radio_button(:nurse, "maureen") %> 
+  <%= f.label(:nurse, "Maureen") %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :dob, 'Date of Birth' %>
+    <%= f.text_field :dob, class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :allergies %>
+    <%= f.text_field :allergies, class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :special_alerts %>
+    <%= f.text_field :special_alerts, class: 'form-control' %>
+  </div>
+ </div>
+  
+ <br>
+ 
+ <div class="row">
+  <div class="col-sm-4">
+    <%= f.label :lives_with, 'Lives With/Relationship' %> 
+    <%= f.text_field :lives_with, class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :phone %> 
+    <%= f.text_field :phone, class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :physician %>
+    <%= f.text_field :physician, class: 'form-control' %>
+  </div>
+  <div class="col-sm-4">
+    <%= f.label :specialists %>
+    <%= f.text_field :specialists, class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-4">
+    <%= f.label :immunizations %>
+    <%= f.text_field :immunizations, class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :most_recent_physical_exam %>
+    <%= f.text_field :most_recent_physical_exam, class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :sleeping_pattern %><br>
+    <%= f.text_area :sleeping_pattern, size: "40x4", class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-5">
+    <%= f.label :bowel_pattern, 'Bowel Pattern/Enuresis, Encropesis' %><br>
+    <%= f.text_area :bowel_pattern, size: "40x4", class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :medications, 'Medications/PRN\'s' %><br>
+    <%= f.text_area :medications, size: '40x4', class: 'form-control' %>
+  </div> 
+
+  <div class="col-sm-4">
+    <%= f.label :current_health_provider, 'Current Mental Health Provider' %><br>
+    <%= f.text_field :current_health_provider, class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :diagnosis %><br>
+    <%= f.text_area :diagnosis, size: "40x4", class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :cps_involvement, "CPS Involvement" %><br>
+    <%= f.text_area :cps_involvement, size: "40x4", class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :legal_issues %><br>
+    <%= f.text_area :legal_issues, size: "40x4", class: 'form-control' %>
+  </div>
+  <div class="col-sm-4">
+    <%= f.label :hobbies %><br>
+    <%= f.text_area :hobbies, size: "40x4", class: 'form-control' %>
+  </div>
+</div>
+
+<div class="row">
+   <div class="col-sm-4">
+    <%= f.label :seizures %><br>
+    <%= f.text_area :seizures, size: "40x4", class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :observation %><br>
+    <%= f.text_area :observation, size: "40x4", class: 'form-control' %>
+  </div>
+</div>
+
+<div class="top50"></div>
+
+<hr>
+<h2>Day Treatment Information</h2>
+<div class="top30"></div>
+
+<div class="row">
+  <div class="col-sm-6">
+  <p><label class="pull-left">Student has been admitted: </label>
+  <span class="pull-left">&nbsp;<%= f.radio_button(:admitted, "Yes") %>
+  <%= f.label(:admitted, "Yes") %>&nbsp;
+  <%= f.radio_button(:admitted, "No") %>
+  <%= f.label(:admitted, "No") %>
+  </span>
+  </p>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-sm-4">
+    <%= f.label :date_admitted, "Date Admitted" %>
+    <%= f.text_field :date_admitted, class: 'form-control' %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= f.label :therapist, "Therapist" %>
+    <%= f.text_field :therapist, class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :classroom, 'Classroom/Grade' %>
+    <%= f.text_field :classroom, class: 'form-control' %>
+  </div>
+</div>
+  
+ <br>
+
+ <div class="row">
+  <div class="col-sm-4">
+    <%= f.label :psychiatrist, "Psychiatrist" %>
+    <%= f.text_field :psychiatrist, class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= f.label :pharmacy, 'Pharmacy' %>
+    <%= f.text_field :pharmacy, class: 'form-control' %>
+  </div>
+ </div>
+  
+ <br>
+
+<div class="row">
+  <div class="text-right col-sm-8">
+    <%= f.submit :class => "btn btn-info btn-lrg" %>
+  </div>
+</div>
+<% end %>
+
+<br>
